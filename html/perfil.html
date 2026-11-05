@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Organiza Aí</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+
+    <header>
+        <h1>Organiza Aí</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="materias.html">Matérias</a></li>
+                <li><a href="tarefas.html">Tarefas</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+                <li><a href="anotacoes.html">Anotações</a></li>
+                <li><a href="progresso.html">Progresso</a></li>
+                <li><a href="conquistas.html">Conquistas</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="como-funciona.html">Como funciona</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Meu perfil</h2>
+            <p>Preencha seus dados para o site te chamar pelo nome.</p>
+        </section>
+
+        <section>
+            <h2>Meus dados</h2>
+            <form id="form-perfil">
+                <label for="perfil-nome">Nome</label>
+                <input type="text" id="perfil-nome" required>
+
+                <label for="perfil-curso">Curso</label>
+                <input type="text" id="perfil-curso">
+
+                <label for="perfil-instituicao">Instituição</label>
+                <input type="text" id="perfil-instituicao">
+
+                <label for="perfil-periodo">Período</label>
+                <input type="number" id="perfil-periodo" min="1" max="12">
+
+                <button type="submit">Salvar perfil</button>
+            </form>
+            <p id="mensagem-perfil"></p>
+        </section>
+
+        <section>
+            <h2>Apagar dados</h2>
+            <p>Apaga todas as matérias, tarefas, anotações, pontos e conquistas salvas neste navegador. Não dá para desfazer.</p>
+            <button type="button" id="btn-apagar-dados">Apagar todos os dados</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Organiza Aí - Projeto Final de Front-End</p>
+    </footer>
+
+    <script src="../js/geral.js"></script>
+    <script src="../js/perfil.js"></script>
+</body>
+</html>
