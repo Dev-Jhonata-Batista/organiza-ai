@@ -60,6 +60,14 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Alinha o título e o menu com o conteúdo principal */
+header h1,
+nav ul {
+    max-width: 868px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ===== Conteúdo principal ===== */
 main {
     max-width: 900px;

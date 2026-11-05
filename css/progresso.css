@@ -1,0 +1,17 @@
+/* Fundo da barra (a parte cinza) */
+.barra {
+    width: 100%;
+    height: 24px;
+    margin: 12px 0 8px 0;
+    background-color: var(--cor-fundo-claro);
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Parte preenchida: o JavaScript muda a largura conforme os pontos */
+.barra-preenchida {
+    width: 0%;
+    height: 100%;
+    background-color: var(--cor-principal);
+}

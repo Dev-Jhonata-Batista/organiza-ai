@@ -1,0 +1,14 @@
+/* Botão de apagar tudo em vermelho, para mostrar que é uma ação perigosa */
+#btn-apagar-dados {
+    background-color: var(--vermelho);
+}
+
+#btn-apagar-dados:hover {
+    background-color: #8f1b12;
+}
+
+/* Mensagem "Perfil salvo!" que o JavaScript vai mostrar */
+#mensagem-perfil {
+    font-weight: bold;
+    color: var(--verde);
+}

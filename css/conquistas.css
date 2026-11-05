@@ -1,0 +1,44 @@
+/* Organiza as conquistas em grade */
+#lista-conquistas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.conquista {
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+}
+
+.conquista h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+}
+
+.conquista p {
+    margin: 0;
+}
+
+.conquista .status {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Ainda não desbloqueada: fica apagada */
+.bloqueada {
+    opacity: 0.5;
+}
+
+/* Desbloqueada: fica verde */
+.desbloqueada {
+    background-color: var(--verde-fundo);
+    border-color: var(--verde);
+}
+
+.desbloqueada .status {
+    color: var(--verde);
+}

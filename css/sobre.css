@@ -1,0 +1,6 @@
+/* Foto */
+main img {
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 4px;
+}
