@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matérias | Organiza Aí</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/materias.css">
+</head>
+<body>
+
+    <header>
+        <h1>Organiza Aí</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="materias.html">Matérias</a></li>
+                <li><a href="tarefas.html">Tarefas</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+                <li><a href="anotacoes.html">Anotações</a></li>
+                <li><a href="progresso.html">Progresso</a></li>
+                <li><a href="conquistas.html">Conquistas</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="como-funciona.html">Como funciona</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Minhas matérias</h2>
+            <p>Cadastre as disciplinas do semestre com o professor e o horário.</p>
+        </section>
+
+        <section>
+            <h2>Adicionar matéria</h2>
+            <form id="form-materia">
+                <label for="materia-nome">Nome da matéria</label>
+                <input type="text" id="materia-nome" required>
+
+                <label for="materia-professor">Professor</label>
+                <input type="text" id="materia-professor">
+
+                <label for="materia-dia">Dia da semana</label>
+                <select id="materia-dia">
+                    <option>Segunda</option>
+                    <option>Terça</option>
+                    <option>Quarta</option>
+                    <option>Quinta</option>
+                    <option>Sexta</option>
+                    <option>Sábado</option>
+                </select>
+
+                <label for="materia-horario">Horário</label>
+                <input type="time" id="materia-horario">
+
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de matérias</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matéria</th>
+                        <th>Professor</th>
+                        <th>Dia</th>
+                        <th>Horário</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-materias">
+                    <tr>
+                        <td colspan="5">Nenhuma matéria cadastrada ainda.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Organiza Aí - Projeto Final de Front-End</p>
+    </footer>
+
+    <script src="../js/geral.js"></script>
+    <script src="../js/materias.js"></script>
+</body>
+</html>

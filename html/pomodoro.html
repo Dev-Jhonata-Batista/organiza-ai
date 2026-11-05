@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro | Organiza Aí</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/pomodoro.css">
+</head>
+<body>
+
+    <header>
+        <h1>Organiza Aí</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="materias.html">Matérias</a></li>
+                <li><a href="tarefas.html">Tarefas</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+                <li><a href="anotacoes.html">Anotações</a></li>
+                <li><a href="progresso.html">Progresso</a></li>
+                <li><a href="conquistas.html">Conquistas</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="como-funciona.html">Como funciona</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Pomodoro</h2>
+            <p>Estude por 25 minutos e descanse por 5. Cada ciclo de estudo completo dá pontos (XP).</p>
+        </section>
+
+        <section>
+            <label for="pomodoro-materia">O que você vai estudar?</label>
+            <select id="pomodoro-materia">
+                <option value="">Sem matéria</option>
+            </select>
+
+            <p id="pomodoro-fase">Hora de estudar</p>
+            <p id="pomodoro-tempo">25:00</p>
+
+            <button type="button" id="btn-iniciar">Iniciar</button>
+            <button type="button" id="btn-pausar">Pausar</button>
+            <button type="button" id="btn-zerar">Zerar</button>
+        </section>
+
+        <section>
+            <h2>Hoje</h2>
+            <p>Pomodoros concluídos hoje: <strong id="pomodoros-hoje">0</strong></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Organiza Aí - Projeto Final de Front-End</p>
+    </footer>
+
+    <script src="../js/geral.js"></script>
+    <script src="../js/pomodoro.js"></script>
+</body>
+</html>

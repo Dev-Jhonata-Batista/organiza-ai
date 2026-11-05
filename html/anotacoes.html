@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações | Organiza Aí</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/anotacoes.css">
+</head>
+<body>
+
+    <header>
+        <h1>Organiza Aí</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="materias.html">Matérias</a></li>
+                <li><a href="tarefas.html">Tarefas</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+                <li><a href="anotacoes.html">Anotações</a></li>
+                <li><a href="progresso.html">Progresso</a></li>
+                <li><a href="conquistas.html">Conquistas</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="como-funciona.html">Como funciona</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Minhas anotações</h2>
+            <p>Guarde resumos, lembretes e o que o professor falou em sala, separados por matéria.</p>
+        </section>
+
+        <section>
+            <h2>Nova anotação</h2>
+            <form id="form-anotacao">
+                <label for="anotacao-titulo">Título</label>
+                <input type="text" id="anotacao-titulo" required>
+
+                <label for="anotacao-materia">Matéria</label>
+                <select id="anotacao-materia">
+                    <option value="">Sem matéria</option>
+                </select>
+
+                <label for="anotacao-texto">Anotação</label>
+                <textarea id="anotacao-texto" rows="5" required></textarea>
+
+                <button type="submit">Salvar anotação</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Anotações salvas</h2>
+            <ul id="lista-anotacoes">
+                <li>Nenhuma anotação ainda.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Organiza Aí - Projeto Final de Front-End</p>
+    </footer>
+
+    <script src="../js/geral.js"></script>
+    <script src="../js/anotacoes.js"></script>
+</body>
+</html>

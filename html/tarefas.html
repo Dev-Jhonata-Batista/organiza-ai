@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas | Organiza Aí</title>
+    <link rel="stylesheet" href="../css/geral.css">
+    <link rel="stylesheet" href="../css/tarefas.css">
+</head>
+<body>
+
+    <header>
+        <h1>Organiza Aí</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="materias.html">Matérias</a></li>
+                <li><a href="tarefas.html">Tarefas</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+                <li><a href="anotacoes.html">Anotações</a></li>
+                <li><a href="progresso.html">Progresso</a></li>
+                <li><a href="conquistas.html">Conquistas</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="como-funciona.html">Como funciona</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Minhas tarefas</h2>
+            <p>Cadastre trabalhos, provas e atividades. O site calcula quantos dias faltam e pinta cada tarefa conforme a urgência.</p>
+        </section>
+
+        <section>
+            <h2>Adicionar tarefa</h2>
+            <form id="form-tarefa">
+                <label for="tarefa-titulo">O que precisa ser feito?</label>
+                <input type="text" id="tarefa-titulo" required>
+
+                <label for="tarefa-materia">Matéria</label>
+                <select id="tarefa-materia">
+                    <option value="">Sem matéria</option>
+                </select>
+
+                <label for="tarefa-tipo">Tipo</label>
+                <select id="tarefa-tipo">
+                    <option>Trabalho</option>
+                    <option>Prova</option>
+                    <option>Atividade</option>
+                </select>
+
+                <label for="tarefa-data">Data de entrega</label>
+                <input type="date" id="tarefa-data" required>
+
+                <button type="submit">Adicionar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>O que significam as cores</h2>
+            <ul>
+                <li><span class="prazo-vermelho">Vermelho</span>: vence em até 2 dias (ou já venceu)</li>
+                <li><span class="prazo-amarelo">Amarelo</span>: vence em até 5 dias</li>
+                <li><span class="prazo-verde">Verde</span>: ainda tem tempo</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Pendentes</h2>
+            <ul id="lista-pendentes">
+                <li>Nenhuma tarefa pendente.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Concluídas</h2>
+            <ul id="lista-concluidas">
+                <li>Nenhuma tarefa concluída ainda.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Organiza Aí - Projeto Final de Front-End</p>
+    </footer>
+
+    <script src="../js/geral.js"></script>
+    <script src="../js/tarefas.js"></script>
+</body>
+</html>
