@@ -1,0 +1,201 @@
+/* ===== Variáveis: as cores do site todo ficam aqui ===== */
+:root {
+    --cor-principal: #1f5fbf;
+    --cor-principal-escura: #174a94;
+    --cor-texto: #222222;
+    --cor-texto-claro: #666666;
+    --cor-borda: #dddddd;
+    --cor-fundo-claro: #f5f5f5;
+
+    --vermelho: #b42318;
+    --vermelho-fundo: #fde8e7;
+    --amarelo: #8a6100;
+    --amarelo-fundo: #fff4cc;
+    --verde: #1e7a3c;
+    --verde-fundo: #e3f5e9;
+}
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--cor-texto);
+    background-color: #ffffff;
+}
+
+/* ===== Topo e menu ===== */
+header {
+    padding: 16px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+header h1 {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    color: var(--cor-principal);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
+/* ===== Conteúdo principal ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+h2 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+}
+
+a {
+    color: var(--cor-principal);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ===== Formulários ===== */
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+}
+
+/* ===== Botões ===== */
+button {
+    margin-top: 12px;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: var(--cor-principal);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-principal-escura);
+}
+
+/* Botão vermelho, usado para excluir itens das listas */
+.btn-excluir {
+    background-color: var(--vermelho);
+}
+
+.btn-excluir:hover {
+    background-color: #8f1b12;
+}
+
+/* ===== Tabelas ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+th {
+    background-color: var(--cor-fundo-claro);
+}
+
+/* ===== Cores dos prazos (usadas em Início, Tarefas e Como funciona) ===== */
+.prazo-vermelho,
+.prazo-amarelo,
+.prazo-verde {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.prazo-vermelho {
+    color: var(--vermelho);
+    background-color: var(--vermelho-fundo);
+}
+
+.prazo-amarelo {
+    color: var(--amarelo);
+    background-color: var(--amarelo-fundo);
+}
+
+.prazo-verde {
+    color: var(--verde);
+    background-color: var(--verde-fundo);
+}
+
+/* ===== Rodapé ===== */
+footer {
+    padding: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--cor-texto-claro);
+    border-top: 1px solid var(--cor-borda);
+}
+
+/* ===== Celular (telas de até 600px de largura) ===== */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 6px 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
