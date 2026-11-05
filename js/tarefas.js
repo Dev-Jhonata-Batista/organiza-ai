@@ -115,6 +115,7 @@ function concluirTarefa(id) {
     tarefa.dataConclusao = dataDeHoje();
 
     salvar("tarefas", tarefas);
+    ganharXP(XP_TAREFA);
     mostrarTarefas();
 }
 
