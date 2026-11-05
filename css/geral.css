@@ -207,3 +207,29 @@ footer {
         font-size: 14px;
     }
 }
+
+/* ===== Itens de lista (tarefas, anotações, próximas tarefas) ===== */
+.item {
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+}
+
+.item strong {
+    display: block;
+}
+
+.item-detalhes {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: var(--cor-texto-claro);
+}
+
+.item button {
+    margin-top: 8px;
+    margin-right: 8px;
+    padding: 4px 12px;
+    font-size: 14px;
+}

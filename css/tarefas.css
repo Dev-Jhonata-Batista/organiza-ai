@@ -1,0 +1,41 @@
+/* Tira as bolinhas e o recuo das listas de tarefas */
+#lista-pendentes,
+#lista-concluidas {
+    padding: 0;
+    list-style: none;
+}
+
+/* Faixa colorida do lado esquerdo, conforme o prazo */
+.tarefa {
+    border-left-width: 6px;
+}
+
+.tarefa-vermelho {
+    border-left-color: var(--vermelho);
+}
+
+.tarefa-amarelo {
+    border-left-color: var(--amarelo);
+}
+
+.tarefa-verde {
+    border-left-color: var(--verde);
+}
+
+/* Tarefa concluída: apagada e com o título riscado */
+.tarefa-concluida {
+    opacity: 0.6;
+}
+
+.tarefa-concluida strong {
+    text-decoration: line-through;
+}
+
+/* Botão verde de concluir */
+.btn-concluir {
+    background-color: var(--verde);
+}
+
+.btn-concluir:hover {
+    background-color: #15602f;
+}
