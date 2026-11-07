@@ -1,139 +1,104 @@
 // =============================================
-// tarefas.js - página de Tarefas
+// tarefas.js - lista de tarefas com cores de prazo
 // =============================================
 
-const formTarefa = document.getElementById("form-tarefa");
-const listaPendentes = document.getElementById("lista-pendentes");
-const listaConcluidas = document.getElementById("lista-concluidas");
+// Busca as tarefas salvas no navegador. Se não tiver nada, começa com uma lista vazia.
+let tarefas = JSON.parse(localStorage.getItem("tarefas")) || [];
 
-let tarefas = carregar("tarefas", []);
+const formulario = document.getElementById("form-tarefa");
+const lista = document.getElementById("lista-tarefas");
 
-// Coloca as matérias cadastradas no campo "Matéria"
-preencherSelectMaterias("tarefa-materia");
+// Calcula quantos dias faltam até a data de entrega
+function diasRestantes(data) {
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
 
-// Mostra as tarefas nas duas listas
+    const entrega = new Date(data + "T00:00:00");
+
+    return Math.round((entrega - hoje) / 86400000); // 86400000 = milissegundos de um dia
+}
+
+// Escolhe a cor conforme os dias que faltam
+function corDoPrazo(dias) {
+    if (dias <= 2) {
+        return "vermelho";
+    }
+    if (dias <= 5) {
+        return "amarelo";
+    }
+    return "verde";
+}
+
+// Salva no navegador e atualiza a tela
+function salvar() {
+    localStorage.setItem("tarefas", JSON.stringify(tarefas));
+    mostrarTarefas();
+}
+
+// Mostra todas as tarefas na lista
 function mostrarTarefas() {
-    listaPendentes.innerHTML = "";
-    listaConcluidas.innerHTML = "";
+    lista.innerHTML = "";
 
-    // Separa as pendentes das concluídas
-    const pendentes = tarefas.filter(function (tarefa) {
-        return tarefa.concluida === false;
-    });
-
-    const concluidas = tarefas.filter(function (tarefa) {
-        return tarefa.concluida === true;
-    });
-
-    // Ordena as pendentes: a que vence primeiro fica em cima
-    pendentes.sort(function (a, b) {
-        return calcularDiasRestantes(a.dataEntrega) - calcularDiasRestantes(b.dataEntrega);
-    });
-
-    // ----- Lista de pendentes -----
-    if (pendentes.length === 0) {
-        listaPendentes.innerHTML = "<li>Nenhuma tarefa pendente.</li>";
+    if (tarefas.length === 0) {
+        lista.innerHTML = "<li>Nenhuma tarefa cadastrada.</li>";
     }
 
-    for (const tarefa of pendentes) {
-        const dias = calcularDiasRestantes(tarefa.dataEntrega);
+    for (let i = 0; i < tarefas.length; i++) {
+        const tarefa = tarefas[i];
+        const dias = diasRestantes(tarefa.data);
         const cor = corDoPrazo(dias);
 
-        const item = document.createElement("li");
-        item.className = "item tarefa tarefa-" + cor;
+        let texto = "Faltam " + dias + " dia(s)";
+        if (dias < 0) {
+            texto = "Atrasada";
+        }
 
-        item.innerHTML = `
-            <strong>${tarefa.titulo}</strong>
-            <span class="item-detalhes">${buscarNomeMateria(tarefa.materiaId)} · ${tarefa.tipo} · Entrega: ${formatarData(tarefa.dataEntrega)}</span>
-            <span class="prazo-${cor}">${textoDoPrazo(dias)}</span>
-            <div>
-                <button class="btn-concluir" onclick="concluirTarefa(${tarefa.id})">Concluir</button>
-                <button class="btn-excluir" onclick="excluirTarefa(${tarefa.id})">Excluir</button>
-            </div>
+        let classeFeita = "";
+        if (tarefa.feita) {
+            classeFeita = "tarefa-feita";
+        }
+
+        lista.innerHTML += `
+            <li class="item tarefa tarefa-${cor} ${classeFeita}">
+                <strong>${tarefa.titulo}</strong>
+                <span class="item-detalhes">${tarefa.materia} · ${tarefa.tipo} · Entrega: ${tarefa.data.split("-").reverse().join("/")}</span>
+                <span class="prazo-${cor}">${texto}</span>
+                <div>
+                    <button class="btn-concluir" onclick="marcarFeita(${i})">Feita</button>
+                    <button class="btn-excluir" onclick="excluir(${i})">Excluir</button>
+                </div>
+            </li>
         `;
-
-        listaPendentes.appendChild(item);
-    }
-
-    // ----- Lista de concluídas -----
-    if (concluidas.length === 0) {
-        listaConcluidas.innerHTML = "<li>Nenhuma tarefa concluída ainda.</li>";
-    }
-
-    for (const tarefa of concluidas) {
-        const item = document.createElement("li");
-        item.className = "item tarefa tarefa-concluida";
-
-        item.innerHTML = `
-            <strong>${tarefa.titulo}</strong>
-            <span class="item-detalhes">${buscarNomeMateria(tarefa.materiaId)} · ${tarefa.tipo} · Concluída em ${formatarData(tarefa.dataConclusao)}</span>
-            <div>
-                <button class="btn-excluir" onclick="excluirTarefa(${tarefa.id})">Excluir</button>
-            </div>
-        `;
-
-        listaConcluidas.appendChild(item);
     }
 }
 
-// Quando o formulário for enviado (botão Adicionar)
-formTarefa.addEventListener("submit", function (evento) {
-    evento.preventDefault();
+// Adiciona uma tarefa quando o formulário é enviado
+formulario.addEventListener("submit", function (evento) {
+    evento.preventDefault(); // impede a página de recarregar
 
-    // A matéria vem como texto. Se for "", é "Sem matéria"
-    const valorMateria = document.getElementById("tarefa-materia").value;
-    let materiaId = null;
-
-    if (valorMateria !== "") {
-        materiaId = Number(valorMateria);
-    }
-
-    const novaTarefa = {
-        id: gerarId(),
+    tarefas.push({
         titulo: document.getElementById("tarefa-titulo").value,
-        materiaId: materiaId,
+        materia: document.getElementById("tarefa-materia").value,
         tipo: document.getElementById("tarefa-tipo").value,
-        dataEntrega: document.getElementById("tarefa-data").value,
-        concluida: false,
-        dataConclusao: null
-    };
+        data: document.getElementById("tarefa-data").value,
+        feita: false
+    });
 
-    tarefas.push(novaTarefa);
-    salvar("tarefas", tarefas);
-    mostrarTarefas();
-
-    formTarefa.reset();
+    formulario.reset();
+    salvar();
 });
 
-// Marca a tarefa como feita
-function concluirTarefa(id) {
-    const tarefa = tarefas.find(function (t) {
-        return t.id === id;
-    });
-
-    tarefa.concluida = true;
-    tarefa.dataConclusao = dataDeHoje();
-
-    salvar("tarefas", tarefas);
-    ganharXP(XP_TAREFA);
-    mostrarTarefas();
+// Marca ou desmarca a tarefa como feita
+function marcarFeita(i) {
+    tarefas[i].feita = !tarefas[i].feita;
+    salvar();
 }
 
-// Exclui a tarefa
-function excluirTarefa(id) {
-    const confirmou = confirm("Excluir esta tarefa?");
-
-    if (!confirmou) {
-        return;
-    }
-
-    tarefas = tarefas.filter(function (t) {
-        return t.id !== id;
-    });
-
-    salvar("tarefas", tarefas);
-    mostrarTarefas();
+// Remove a tarefa da lista
+function excluir(i) {
+    tarefas.splice(i, 1);
+    salvar();
 }
 
-// Quando a página abre, mostra as tarefas salvas
+// Mostra as tarefas quando a página abre
 mostrarTarefas();

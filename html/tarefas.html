@@ -17,10 +17,10 @@
                 <li><a href="materias.html">Matérias</a></li>
                 <li><a href="tarefas.html">Tarefas</a></li>
                 <li><a href="pomodoro.html">Pomodoro</a></li>
-                <li><a href="anotacoes.html">Anotações</a></li>
+                <li><a href="dicas.html">Dicas de estudo</a></li>
                 <li><a href="progresso.html">Progresso</a></li>
                 <li><a href="conquistas.html">Conquistas</a></li>
-                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="horario.html">Horário</a></li>
                 <li><a href="como-funciona.html">Como funciona</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
             </ul>
@@ -41,7 +41,10 @@
 
                 <label for="tarefa-materia">Matéria</label>
                 <select id="tarefa-materia">
-                    <option value="">Sem matéria</option>
+                    <option>Modelagem de Banco de Dados</option>
+                    <option>Design Profissional</option>
+                    <option>Pensamento Computacional</option>
+                    <option>Outra</option>
                 </select>
 
                 <label for="tarefa-tipo">Tipo</label>
@@ -68,17 +71,8 @@
         </section>
 
         <section>
-            <h2>Pendentes</h2>
-            <ul id="lista-pendentes">
-                <li>Nenhuma tarefa pendente.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Concluídas</h2>
-            <ul id="lista-concluidas">
-                <li>Nenhuma tarefa concluída ainda.</li>
-            </ul>
+            <h2>Lista de tarefas</h2>
+            <ul id="lista-tarefas"></ul>
         </section>
     </main>
 
@@ -86,7 +80,6 @@
         <p>Organiza Aí - Projeto Final de Front-End</p>
     </footer>
 
-    <script src="../js/geral.js"></script>
     <script src="../js/tarefas.js"></script>
 </body>
 </html>
