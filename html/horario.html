@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil | Organiza Aí</title>
+    <title>Horário | Organiza Aí</title>
     <link rel="stylesheet" href="../css/geral.css">
-    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../css/horario.css">
 </head>
 <body>
 
@@ -29,42 +29,55 @@
 
     <main>
         <section>
-            <h2>Meu perfil</h2>
-            <p>Preencha seus dados para o site te chamar pelo nome.</p>
+            <h2>Horário semanal</h2>
+            <p>As aulas da semana organizadas por dia e turno, para ver de uma vez quando você está ocupado e quando tem tempo livre para estudar.</p>
         </section>
 
         <section>
-            <h2>Meus dados</h2>
-            <form id="form-perfil">
-                <label for="perfil-nome">Nome</label>
-                <input type="text" id="perfil-nome" required>
-
-                <label for="perfil-curso">Curso</label>
-                <input type="text" id="perfil-curso">
-
-                <label for="perfil-instituicao">Instituição</label>
-                <input type="text" id="perfil-instituicao">
-
-                <label for="perfil-periodo">Período</label>
-                <input type="number" id="perfil-periodo" min="1" max="12">
-
-                <button type="submit">Salvar perfil</button>
-            </form>
-            <p id="mensagem-perfil"></p>
-        </section>
-
-        <section>
-            <h2>Apagar dados</h2>
-            <p>Apaga todas as matérias, tarefas, anotações, pontos e conquistas salvas neste navegador. Não dá para desfazer.</p>
-            <button type="button" id="btn-apagar-dados">Apagar todos os dados</button>
+            <table>
+                <caption>Aulas da semana</caption>
+                <thead>
+                    <tr>
+                        <th>Turno</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Manhã</th>
+                        <td class="aula">Pensamento Computacional</td>
+                        <td class="livre">Livre</td>
+                        <td class="aula">Modelagem de Banco de Dados</td>
+                        <td class="aula">Design Profissional</td>
+                        <td class="livre">Livre</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tarde</th>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Noite</th>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                        <td class="livre">Livre</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
         <p>Organiza Aí - Projeto Final de Front-End</p>
     </footer>
-
-
-    <script src="../js/perfil.js"></script>
 </body>
 </html>

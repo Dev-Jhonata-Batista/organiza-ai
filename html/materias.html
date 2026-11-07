@@ -30,50 +30,38 @@
     <main>
         <section>
             <h2>Minhas matérias</h2>
-            <p>Cadastre as disciplinas do semestre com o professor e o horário.</p>
+            <p>As disciplinas do semestre, com o professor e o horário de cada uma.</p>
         </section>
 
         <section>
-            <h2>Adicionar matéria</h2>
-            <form id="form-materia">
-                <label for="materia-nome">Nome da matéria</label>
-                <input type="text" id="materia-nome" required>
-
-                <label for="materia-professor">Professor</label>
-                <input type="text" id="materia-professor">
-
-                <label for="materia-dia">Dia da semana</label>
-                <select id="materia-dia">
-                    <option>Segunda</option>
-                    <option>Terça</option>
-                    <option>Quarta</option>
-                    <option>Quinta</option>
-                    <option>Sexta</option>
-                    <option>Sábado</option>
-                </select>
-
-                <label for="materia-horario">Horário</label>
-                <input type="time" id="materia-horario">
-
-                <button type="submit">Adicionar</button>
-            </form>
-        </section>
-
-        <section>
-            <h2>Lista de matérias</h2>
             <table>
+                <caption>Disciplinas do semestre</caption>
                 <thead>
                     <tr>
                         <th>Matéria</th>
                         <th>Professor</th>
                         <th>Dia</th>
                         <th>Horário</th>
-                        <th>Ação</th>
                     </tr>
                 </thead>
-                <tbody id="tabela-materias">
+                <tbody>
                     <tr>
-                        <td colspan="5">Nenhuma matéria cadastrada ainda.</td>
+                        <td>Pensamento Computacional</td>
+                        <td>Leandro</td>
+                        <td>Segunda</td>
+                        <td>07:00</td>
+                    </tr>
+                    <tr>
+                        <td>Modelagem de Banco de Dados</td>
+                        <td>Kaline</td>
+                        <td>Quarta</td>
+                        <td>07:00</td>
+                    </tr>
+                    <tr>
+                        <td>Design Profissional</td>
+                        <td>Pablo</td>
+                        <td>Quinta</td>
+                        <td>07:00</td>
                     </tr>
                 </tbody>
             </table>
@@ -83,7 +71,5 @@
     <footer>
         <p>Organiza Aí - Projeto Final de Front-End</p>
     </footer>
-
-    <script src="../js/materias.js"></script>
 </body>
 </html>

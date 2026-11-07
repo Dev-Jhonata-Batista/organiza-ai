@@ -1,0 +1,18 @@
+/* Mais espaço entre os itens da lista */
+.lista-recursos li {
+    margin-bottom: 8px;
+}
+
+/* Link com aparência de botão */
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--cor-principal);
+    border-radius: 4px;
+}
+
+.botao:hover {
+    background-color: var(--cor-principal-escura);
+}

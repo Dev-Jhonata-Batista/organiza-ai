@@ -1,14 +1,11 @@
-/* Botão de excluir dentro da tabela: menor e sem espaço em cima */
-td button {
-    margin-top: 0;
-    padding: 4px 12px;
-    font-size: 14px;
+/* Título da tabela */
+caption {
+    margin-bottom: 8px;
+    text-align: left;
+    color: var(--cor-texto-claro);
 }
 
-/* No celular, se a tabela não couber, ela rola para o lado */
-@media (max-width: 600px) {
-    table {
-        display: block;
-        overflow-x: auto;
-    }
+/* Linhas alternadas com fundo cinza (efeito "zebra") */
+tbody tr:nth-child(even) {
+    background-color: var(--cor-fundo-claro);
 }

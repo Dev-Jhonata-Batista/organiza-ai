@@ -1,14 +1,37 @@
-/* Botão de apagar tudo em vermelho, para mostrar que é uma ação perigosa */
-#btn-apagar-dados {
-    background-color: var(--vermelho);
+/* Título da tabela */
+caption {
+    margin-bottom: 8px;
+    text-align: left;
+    color: var(--cor-texto-claro);
 }
 
-#btn-apagar-dados:hover {
-    background-color: #8f1b12;
+/* Centraliza o texto das células */
+th,
+td {
+    text-align: center;
 }
 
-/* Mensagem "Perfil salvo!" que o JavaScript vai mostrar */
-#mensagem-perfil {
+/* Coluna dos turnos (Manhã, Tarde, Noite) */
+tbody th {
+    background-color: var(--cor-fundo-claro);
+}
+
+/* Célula com aula: destacada em azul */
+.aula {
     font-weight: bold;
-    color: var(--verde);
+    color: var(--cor-principal);
+    background-color: #e8f0fb;
+}
+
+/* Célula sem aula: texto apagado */
+.livre {
+    color: var(--cor-texto-claro);
+}
+
+/* No celular, se a tabela não couber, ela rola para o lado */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
 }
