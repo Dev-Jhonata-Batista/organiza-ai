@@ -30,26 +30,26 @@
     <main>
         <section>
             <h2>Pomodoro</h2>
-            <p>Estude por 25 minutos e descanse por 5. Cada ciclo de estudo completo dá pontos (XP).</p>
+            <p>Estude e descanse em ciclos. O padrão é 25 minutos de estudo e 5 de pausa, mas você pode mudar os minutos logo abaixo do cronômetro.</p>
         </section>
 
         <section>
-            <label for="pomodoro-materia">O que você vai estudar?</label>
-            <select id="pomodoro-materia">
-                <option value="">Sem matéria</option>
-            </select>
-
             <p id="pomodoro-fase">Hora de estudar</p>
             <p id="pomodoro-tempo">25:00</p>
 
-            <button type="button" id="btn-iniciar">Iniciar</button>
-            <button type="button" id="btn-pausar">Pausar</button>
-            <button type="button" id="btn-zerar">Zerar</button>
+            <button type="button" id="btn-iniciar" onclick="iniciar()">Iniciar</button>
+            <button type="button" id="btn-pausar" onclick="pausar()">Pausar</button>
+            <button type="button" id="btn-zerar" onclick="zerar()">Zerar</button>
         </section>
 
         <section>
-            <h2>Hoje</h2>
-            <p>Pomodoros concluídos hoje: <strong id="pomodoros-hoje">0</strong></p>
+            <h2>Ajustar tempos</h2>
+
+            <label for="minutos-estudo">Minutos de estudo</label>
+            <input type="number" id="minutos-estudo" value="25" min="1" max="60" onchange="zerar()">
+
+            <label for="minutos-pausa">Minutos de pausa</label>
+            <input type="number" id="minutos-pausa" value="5" min="1" max="30" onchange="zerar()">
         </section>
     </main>
 
