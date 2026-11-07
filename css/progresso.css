@@ -9,9 +9,9 @@
     overflow: hidden;
 }
 
-/* Parte preenchida: o JavaScript muda a largura conforme os pontos */
+/* Parte preenchida: 53% do caminho entre Veterano (100 XP) e Monitor (250 XP) */
 .barra-preenchida {
-    width: 0%;
+    width: 53%;
     height: 100%;
     background-color: var(--cor-principal);
 }

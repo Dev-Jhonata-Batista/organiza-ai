@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anotações | Organiza Aí</title>
+    <title>Dicas de estudo | Organiza Aí</title>
     <link rel="stylesheet" href="../css/geral.css">
-    <link rel="stylesheet" href="../css/anotacoes.css">
+    <link rel="stylesheet" href="../css/dicas.css">
 </head>
 <body>
 
@@ -29,40 +29,45 @@
 
     <main>
         <section>
-            <h2>Minhas anotações</h2>
-            <p>Guarde resumos, lembretes e o que o professor falou em sala, separados por matéria.</p>
+            <h2>Dicas de estudo</h2>
+            <p>Técnicas simples que ajudam a estudar melhor e a esquecer menos.</p>
         </section>
 
         <section>
-            <h2>Nova anotação</h2>
-            <form id="form-anotacao">
-                <label for="anotacao-titulo">Título</label>
-                <input type="text" id="anotacao-titulo" required>
+            <article class="dica">
+                <h3>1. Técnica Pomodoro</h3>
+                <p>Estude em blocos de tempo com pausas curtas entre eles, por exemplo 25 minutos de estudo e 5 de descanso. A cada 4 blocos, faça uma pausa maior. Use a página <a href="pomodoro.html">Pomodoro</a> para cronometrar.</p>
+            </article>
 
-                <label for="anotacao-materia">Matéria</label>
-                <select id="anotacao-materia">
-                    <option value="">Sem matéria</option>
-                </select>
+            <article class="dica">
+                <h3>2. Revisão espaçada</h3>
+                <p>Em vez de estudar tudo na véspera, revise o conteúdo algumas vezes com intervalos cada vez maiores: no dia seguinte, depois de uma semana e depois de um mês. Assim ele fica guardado por mais tempo.</p>
+            </article>
 
-                <label for="anotacao-texto">Anotação</label>
-                <textarea id="anotacao-texto" rows="5" required></textarea>
+            <article class="dica">
+                <h3>3. Explique com suas palavras</h3>
+                <p>Tente explicar o assunto como se fosse para alguém que nunca ouviu falar dele. Onde você travar é exatamente o ponto que precisa estudar de novo.</p>
+            </article>
 
-                <button type="submit">Salvar anotação</button>
-            </form>
-        </section>
+            <article class="dica">
+                <h3>4. Teste a si mesmo</h3>
+                <p>Fazer exercícios e tentar lembrar a matéria sem olhar fixa muito mais do que só reler o resumo várias vezes.</p>
+            </article>
 
-        <section>
-            <h2>Anotações salvas</h2>
-            <ul id="lista-anotacoes">
-                <li>Nenhuma anotação ainda.</li>
-            </ul>
+            <article class="dica">
+                <h3>5. Comece pelo mais urgente</h3>
+                <p>Use as cores da página de <a href="tarefas.html">Tarefas</a>: resolva primeiro o que está em vermelho, depois o amarelo, e deixe o verde para quando tiver folga.</p>
+            </article>
+
+            <article class="dica">
+                <h3>6. Cuide do básico</h3>
+                <p>Dormir bem, beber água e fazer as pausas longe da tela também fazem parte do estudo. Cansado, o cérebro rende menos.</p>
+            </article>
         </section>
     </main>
 
     <footer>
         <p>Organiza Aí - Projeto Final de Front-End</p>
     </footer>
-
-    <a href="dicas.html">Dicas de estudo</a>
 </body>
 </html>

@@ -233,3 +233,15 @@ footer {
     padding: 4px 12px;
     font-size: 14px;
 }
+/* ===== Aviso de exemplo (usado em Progresso e Conquistas) ===== */
+.aviso {
+    padding: 8px 12px;
+    background-color: var(--amarelo-fundo);
+    border-radius: 4px;
+}
+/* ===== Aviso de exemplo (usado em Progresso e Conquistas) ===== */
+.aviso {
+    padding: 8px 12px;
+    background-color: var(--amarelo-fundo);
+    border-radius: 4px;
+}

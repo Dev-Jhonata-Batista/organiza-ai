@@ -1,0 +1,17 @@
+/* Cada dica fica em um cartão com uma faixa azul na esquerda */
+.dica {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border: 1px solid var(--cor-borda);
+    border-left: 4px solid var(--cor-principal);
+    border-radius: 4px;
+}
+
+.dica h3 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+}
+
+.dica p {
+    margin: 0;
+}
