@@ -1,4 +1,4 @@
-/* As tabelas daqui têm só 2 colunas, então não precisam ocupar a largura toda */
+/* As tabelas daqui têm só 2 colunas, então ficam mais estreitas */
 table {
     max-width: 500px;
 }

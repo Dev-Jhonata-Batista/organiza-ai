@@ -1,4 +1,4 @@
-/* Organiza as conquistas em grade */
+/* As conquistas ficam em grade: quantas colunas couberem, com no mínimo 200px cada */
 #lista-conquistas {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -7,38 +7,43 @@
     list-style: none;
 }
 
+/* Cada conquista vira um cartão com borda */
 .conquista {
     padding: 12px;
-    border: 1px solid var(--cor-borda);
+    border: 1px solid #dddddd;
     border-radius: 4px;
 }
 
+/* Nome da conquista */
 .conquista h3 {
-    margin: 0 0 4px 0;
+    margin-top: 0;
+    margin-bottom: 4px;
     font-size: 16px;
 }
 
+/* Textos da conquista */
 .conquista p {
     margin: 0;
 }
 
+/* "Bloqueada" ou "Desbloqueada" */
 .conquista .status {
     margin-top: 8px;
     font-size: 14px;
     font-weight: bold;
 }
 
-/* Ainda não desbloqueada: fica apagada */
+/* Bloqueada: fica apagada */
 .bloqueada {
     opacity: 0.5;
 }
 
 /* Desbloqueada: fica verde */
 .desbloqueada {
-    background-color: var(--verde-fundo);
-    border-color: var(--verde);
+    background-color: #e3f5e9;
+    border-color: #1e7a3c;
 }
 
 .desbloqueada .status {
-    color: var(--verde);
+    color: #1e7a3c;
 }

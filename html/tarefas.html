@@ -30,12 +30,13 @@
     <main>
         <section>
             <h2>Minhas tarefas</h2>
-            <p>Cadastre trabalhos, provas e atividades. O site calcula quantos dias faltam e pinta cada tarefa conforme a urgência.</p>
+            <p>Cadastre trabalhos, provas e atividades. Cada tarefa aparece com uma cor conforme a urgência da entrega.</p>
+            <p class="aviso">Esta página mostra um exemplo de como as tarefas aparecem no Organiza Aí.</p>
         </section>
 
         <section>
             <h2>Adicionar tarefa</h2>
-            <form id="form-tarefa">
+            <form>
                 <label for="tarefa-titulo">O que precisa ser feito?</label>
                 <input type="text" id="tarefa-titulo" required>
 
@@ -72,14 +73,32 @@
 
         <section>
             <h2>Lista de tarefas</h2>
-            <ul id="lista-tarefas"></ul>
+            <ul class="lista-tarefas">
+                <li class="tarefa tarefa-vermelho">
+                    <strong>Prova 1</strong>
+                    <span class="detalhes">Modelagem de Banco de Dados · Prova · Entrega: 13/11/2026</span>
+                    <span class="prazo-vermelho">Falta 1 dia</span>
+                </li>
+                <li class="tarefa tarefa-amarelo">
+                    <strong>Apresentação do portfólio</strong>
+                    <span class="detalhes">Design Profissional · Trabalho · Entrega: 16/11/2026</span>
+                    <span class="prazo-amarelo">Faltam 4 dias</span>
+                </li>
+                <li class="tarefa tarefa-verde">
+                    <strong>Lista de exercícios 3</strong>
+                    <span class="detalhes">Pensamento Computacional · Atividade · Entrega: 25/11/2026</span>
+                    <span class="prazo-verde">Faltam 13 dias</span>
+                </li>
+                <li class="tarefa tarefa-feita">
+                    <strong>Projeto final Organiza Aí</strong>
+                    <span class="detalhes">Outra · Trabalho · Concluída em 12/11/2026</span>
+                </li>
+            </ul>
         </section>
     </main>
 
     <footer>
         <p>Organiza Aí - Projeto Final de Front-End</p>
     </footer>
-
-    <script src="../js/tarefas.js"></script>
 </body>
 </html>

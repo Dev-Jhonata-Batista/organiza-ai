@@ -1,40 +1,20 @@
-/* Fase atual (estudo ou pausa) */
-#pomodoro-fase {
+/* Texto "Hora de estudar" e "Hora da pausa" */
+.fase {
     margin: 0;
     font-size: 20px;
     font-weight: bold;
 }
 
-/* Na pausa, o JavaScript adiciona esta classe e o texto fica verde */
+/* Na pausa, o texto fica verde */
 .fase-pausa {
-    color: var(--verde);
+    color: #1e7a3c;
 }
 
 /* Cronômetro grande */
-#pomodoro-tempo {
-    margin: 0 0 8px 0;
+.tempo {
+    margin-top: 0;
+    margin-bottom: 8px;
     font-size: 72px;
     font-weight: bold;
-    color: var(--cor-principal);
-}
-
-/* Espaço entre os botões */
-#btn-iniciar,
-#btn-pausar {
-    margin-right: 8px;
-}
-
-/* Botão de zerar em cinza, para chamar menos atenção */
-#btn-zerar {
-    background-color: var(--cor-texto-claro);
-}
-
-#btn-zerar:hover {
-    background-color: var(--cor-texto);
-}
-
-/* Campos de minutos mais estreitos */
-#minutos-estudo,
-#minutos-pausa {
-    max-width: 200px;
+    color: #1f5fbf;
 }

@@ -1,66 +1,58 @@
-/* ===== Variáveis: as cores do site todo ficam aqui ===== */
-:root {
-    --cor-principal: #1f5fbf;
-    --cor-principal-escura: #174a94;
-    --cor-texto: #222222;
-    --cor-texto-claro: #666666;
-    --cor-borda: #dddddd;
-    --cor-fundo-claro: #f5f5f5;
+/* CSS usado por todas as páginas */
 
-    --vermelho: #b42318;
-    --vermelho-fundo: #fde8e7;
-    --amarelo: #8a6100;
-    --amarelo-fundo: #fff4cc;
-    --verde: #1e7a3c;
-    --verde-fundo: #e3f5e9;
-}
-
-/* ===== Base ===== */
+/* A largura de cada elemento já inclui o espaço interno e a borda */
 * {
     box-sizing: border-box;
 }
 
+/* Página inteira: fonte, tamanho do texto e cores */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: var(--cor-texto);
+    color: #222222;
     background-color: #ffffff;
 }
 
-/* ===== Topo e menu ===== */
+/* Topo da página */
 header {
     padding: 16px;
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 1px solid #dddddd;
 }
 
+/* Nome do site */
 header h1 {
-    margin: 0 0 12px 0;
+    margin-top: 0;
+    margin-bottom: 12px;
     font-size: 24px;
-    color: var(--cor-principal);
+    color: #1f5fbf;
 }
 
+/* Menu: os links ficam lado a lado e descem de linha quando não cabem */
 nav ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 16px;
+    row-gap: 8px;
+    column-gap: 16px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* Links do menu */
 nav a {
-    color: var(--cor-texto);
+    color: #222222;
     text-decoration: none;
 }
 
+/* Link do menu quando o mouse passa por cima */
 nav a:hover {
-    color: var(--cor-principal);
+    color: #1f5fbf;
     text-decoration: underline;
 }
 
-/* Alinha o título e o menu com o conteúdo principal */
+/* Deixa o nome do site e o menu alinhados com o conteúdo */
 header h1,
 nav ul {
     max-width: 868px;
@@ -68,31 +60,36 @@ nav ul {
     margin-right: auto;
 }
 
-/* ===== Conteúdo principal ===== */
+/* Conteúdo da página: no máximo 900px de largura e centralizado */
 main {
     max-width: 900px;
     margin: 0 auto;
     padding: 24px 16px;
 }
 
+/* Espaço entre as seções */
 section {
     margin-bottom: 32px;
 }
 
+/* Títulos das seções */
 h2 {
-    margin: 0 0 12px 0;
+    margin-top: 0;
+    margin-bottom: 12px;
     font-size: 20px;
 }
 
+/* Links do conteúdo */
 a {
-    color: var(--cor-principal);
+    color: #1f5fbf;
 }
 
+/* Imagens nunca ficam maiores que a tela */
 img {
     max-width: 100%;
 }
 
-/* ===== Formulários ===== */
+/* Texto de cada campo do formulário */
 label {
     display: block;
     margin-top: 12px;
@@ -100,61 +97,55 @@ label {
     font-weight: bold;
 }
 
+/* Campos do formulário */
 input,
-select,
-textarea {
+select {
     width: 100%;
     padding: 8px;
     font-family: inherit;
     font-size: 16px;
-    border: 1px solid var(--cor-borda);
+    border: 1px solid #dddddd;
     border-radius: 4px;
 }
 
-/* ===== Botões ===== */
+/* Botões */
 button {
     margin-top: 12px;
     padding: 8px 16px;
     font-family: inherit;
     font-size: 16px;
     color: #ffffff;
-    background-color: var(--cor-principal);
+    background-color: #1f5fbf;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
+/* Botão quando o mouse passa por cima */
 button:hover {
-    background-color: var(--cor-principal-escura);
+    background-color: #174a94;
 }
 
-/* Botão vermelho, usado para excluir itens das listas */
-.btn-excluir {
-    background-color: var(--vermelho);
-}
-
-.btn-excluir:hover {
-    background-color: #8f1b12;
-}
-
-/* ===== Tabelas ===== */
+/* Tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
+/* Células das tabelas */
 th,
 td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid var(--cor-borda);
+    border-bottom: 1px solid #dddddd;
 }
 
+/* Células de título das tabelas */
 th {
-    background-color: var(--cor-fundo-claro);
+    background-color: #f5f5f5;
 }
 
-/* ===== Cores dos prazos (usadas em Início, Tarefas e Como funciona) ===== */
+/* Etiquetas coloridas dos prazos */
 .prazo-vermelho,
 .prazo-amarelo,
 .prazo-verde {
@@ -164,37 +155,45 @@ th {
 }
 
 .prazo-vermelho {
-    color: var(--vermelho);
-    background-color: var(--vermelho-fundo);
+    color: #b42318;
+    background-color: #fde8e7;
 }
 
 .prazo-amarelo {
-    color: var(--amarelo);
-    background-color: var(--amarelo-fundo);
+    color: #8a6100;
+    background-color: #fff4cc;
 }
 
 .prazo-verde {
-    color: var(--verde);
-    background-color: var(--verde-fundo);
+    color: #1e7a3c;
+    background-color: #e3f5e9;
 }
 
-/* ===== Rodapé ===== */
+/* Aviso amarelo das páginas de exemplo */
+.aviso {
+    padding: 8px 12px;
+    background-color: #fff4cc;
+    border-radius: 4px;
+}
+
+/* Rodapé */
 footer {
     padding: 16px;
     text-align: center;
     font-size: 14px;
-    color: var(--cor-texto-claro);
-    border-top: 1px solid var(--cor-borda);
+    color: #666666;
+    border-top: 1px solid #dddddd;
 }
 
-/* ===== Celular (telas de até 600px de largura) ===== */
+/* Celular: telas de até 600px de largura */
 @media (max-width: 600px) {
     header h1 {
         font-size: 20px;
     }
 
     nav ul {
-        gap: 6px 12px;
+        row-gap: 6px;
+        column-gap: 12px;
     }
 
     nav a {
@@ -206,42 +205,4 @@ footer {
         padding: 6px;
         font-size: 14px;
     }
-}
-
-/* ===== Itens de lista (tarefas, anotações, próximas tarefas) ===== */
-.item {
-    margin-bottom: 12px;
-    padding: 12px;
-    border: 1px solid var(--cor-borda);
-    border-radius: 4px;
-}
-
-.item strong {
-    display: block;
-}
-
-.item-detalhes {
-    display: block;
-    margin-bottom: 4px;
-    font-size: 14px;
-    color: var(--cor-texto-claro);
-}
-
-.item button {
-    margin-top: 8px;
-    margin-right: 8px;
-    padding: 4px 12px;
-    font-size: 14px;
-}
-/* ===== Aviso de exemplo (usado em Progresso e Conquistas) ===== */
-.aviso {
-    padding: 8px 12px;
-    background-color: var(--amarelo-fundo);
-    border-radius: 4px;
-}
-/* ===== Aviso de exemplo (usado em Progresso e Conquistas) ===== */
-.aviso {
-    padding: 8px 12px;
-    background-color: var(--amarelo-fundo);
-    border-radius: 4px;
 }

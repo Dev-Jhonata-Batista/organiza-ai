@@ -1,6 +1,6 @@
 # Organiza Aí
 
-Site para ajudar estudantes universitários a organizar os estudos: tarefas com alerta de prazo por cores, cronômetro Pomodoro e uma proposta de gamificação com pontos, níveis e conquistas.
+Site para ajudar estudantes universitários a organizar os estudos: tarefas com alerta de prazo por cores, técnica Pomodoro e uma proposta de gamificação com pontos, níveis e conquistas. Feito só com HTML e CSS.
 
 Projeto final da disciplina de Front-End.
 
@@ -12,8 +12,8 @@ Projeto final da disciplina de Front-End.
 |---|---|
 | Início | Apresentação do site e atalhos |
 | Matérias | Tabela com as disciplinas, professores e horários |
-| Tarefas | Cadastro de tarefas com cores de prazo (vermelho, amarelo e verde) |
-| Pomodoro | Cronômetro de estudo e pausa com tempos ajustáveis |
+| Tarefas | Formulário de tarefas e exemplo das cores de prazo (vermelho, amarelo e verde) |
+| Pomodoro | Exemplo do cronômetro e como fazer um ciclo de estudo |
 | Dicas de estudo | Técnicas para estudar melhor |
 | Progresso | Exemplo de nível, pontos e barra de progresso |
 | Conquistas | Exemplo de medalhas bloqueadas e desbloqueadas |
@@ -24,15 +24,13 @@ Projeto final da disciplina de Front-End.
 ## Tecnologias
 
 - **HTML5:** tags semânticas, tabelas e formulários
-- **CSS3:** variáveis, flexbox, grid e media queries. Um CSS geral e um CSS para cada página
-- **JavaScript:** usado só em 2 páginas. O `tarefas.js` calcula os dias que faltam, pinta as tarefas e salva no navegador (localStorage). O `pomodoro.js` faz o cronômetro funcionar
+- **CSS3:** flexbox, grid e media queries. Um CSS geral e um CSS para cada página
 
 ## Estrutura de pastas
 
 - `css/`: o geral.css e um arquivo para cada página
 - `html/`: as 10 páginas
 - `img/`: imagens
-- `js/`: tarefas.js e pomodoro.js
 
 ## Como rodar
 

@@ -30,33 +30,49 @@
     <main>
         <section>
             <h2>Pomodoro</h2>
-            <p>Estude e descanse em ciclos. O padrão é 25 minutos de estudo e 5 de pausa, mas você pode mudar os minutos logo abaixo do cronômetro.</p>
+            <p>Estude e descanse em ciclos: um tempo de estudo com foco total, depois uma pausa curta. Cada ciclo de estudo completo dá pontos (XP).</p>
+            <p class="aviso">Esta página mostra um exemplo de como o cronômetro aparece no Organiza Aí.</p>
         </section>
 
         <section>
-            <p id="pomodoro-fase">Hora de estudar</p>
-            <p id="pomodoro-tempo">25:00</p>
+            <p class="fase">Hora de estudar</p>
+            <p class="tempo">25:00</p>
 
-            <button type="button" id="btn-iniciar" onclick="iniciar()">Iniciar</button>
-            <button type="button" id="btn-pausar" onclick="pausar()">Pausar</button>
-            <button type="button" id="btn-zerar" onclick="zerar()">Zerar</button>
+            <p class="fase fase-pausa">Hora da pausa</p>
+            <p class="tempo">05:00</p>
         </section>
 
         <section>
-            <h2>Ajustar tempos</h2>
+            <h2>Como fazer um ciclo</h2>
+            <ol>
+                <li>Escolha uma tarefa e deixe o celular longe.</li>
+                <li>Estude até o tempo de estudo acabar.</li>
+                <li>Faça a pausa: levante, beba água, descanse a vista.</li>
+                <li>A cada 4 ciclos, faça uma pausa maior, de 15 a 30 minutos.</li>
+            </ol>
+        </section>
 
-            <label for="minutos-estudo">Minutos de estudo</label>
-            <input type="number" id="minutos-estudo" value="25" min="1" max="60" onchange="zerar()">
-
-            <label for="minutos-pausa">Minutos de pausa</label>
-            <input type="number" id="minutos-pausa" value="5" min="1" max="30" onchange="zerar()">
+        <section>
+            <h2>Tempos mais usados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Estudo</th>
+                        <th>Pausa</th>
+                        <th>Para quem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>25 minutos</td><td>5 minutos</td><td>O padrão, bom para começar</td></tr>
+                    <tr><td>30 minutos</td><td>5 minutos</td><td>Quem quer um pouco mais de foco</td></tr>
+                    <tr><td>50 minutos</td><td>10 minutos</td><td>Quem já tem costume de estudar</td></tr>
+                </tbody>
+            </table>
         </section>
     </main>
 
     <footer>
         <p>Organiza Aí - Projeto Final de Front-End</p>
     </footer>
-
-    <script src="../js/pomodoro.js"></script>
 </body>
 </html>

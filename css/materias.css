@@ -2,10 +2,10 @@
 caption {
     margin-bottom: 8px;
     text-align: left;
-    color: var(--cor-texto-claro);
+    color: #666666;
 }
 
-/* Linhas alternadas com fundo cinza (efeito "zebra") */
+/* Linhas pares com fundo cinza (efeito "zebra") */
 tbody tr:nth-child(even) {
-    background-color: var(--cor-fundo-claro);
+    background-color: #f5f5f5;
 }

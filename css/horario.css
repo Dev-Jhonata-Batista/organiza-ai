@@ -2,10 +2,10 @@
 caption {
     margin-bottom: 8px;
     text-align: left;
-    color: var(--cor-texto-claro);
+    color: #666666;
 }
 
-/* Centraliza o texto das células */
+/* Texto das células no centro */
 th,
 td {
     text-align: center;
@@ -13,22 +13,22 @@ td {
 
 /* Coluna dos turnos (Manhã, Tarde, Noite) */
 tbody th {
-    background-color: var(--cor-fundo-claro);
+    background-color: #f5f5f5;
 }
 
-/* Célula com aula: destacada em azul */
+/* Célula com aula: azul */
 .aula {
     font-weight: bold;
-    color: var(--cor-principal);
+    color: #1f5fbf;
     background-color: #e8f0fb;
 }
 
-/* Célula sem aula: texto apagado */
+/* Célula sem aula: cinza */
 .livre {
-    color: var(--cor-texto-claro);
+    color: #666666;
 }
 
-/* No celular, se a tabela não couber, ela rola para o lado */
+/* Celular: se a tabela não couber, ela rola para o lado */
 @media (max-width: 600px) {
     table {
         display: block;

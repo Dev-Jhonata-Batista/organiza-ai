@@ -1,24 +1,42 @@
-/* Tira as bolinhas e o recuo da lista */
-#lista-tarefas {
+/* Lista de tarefas sem as bolinhas e sem o recuo */
+.lista-tarefas {
     padding: 0;
     list-style: none;
 }
 
-/* Faixa colorida do lado esquerdo, conforme o prazo */
+/* Cada tarefa vira um cartão com borda */
 .tarefa {
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid #dddddd;
     border-left-width: 6px;
+    border-radius: 4px;
 }
 
+/* Título da tarefa em uma linha só */
+.tarefa strong {
+    display: block;
+}
+
+/* Matéria, tipo e data, em cinza e menor */
+.detalhes {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Cor da faixa da esquerda, conforme o prazo */
 .tarefa-vermelho {
-    border-left-color: var(--vermelho);
+    border-left-color: #b42318;
 }
 
 .tarefa-amarelo {
-    border-left-color: var(--amarelo);
+    border-left-color: #8a6100;
 }
 
 .tarefa-verde {
-    border-left-color: var(--verde);
+    border-left-color: #1e7a3c;
 }
 
 /* Tarefa feita: apagada e com o título riscado */
@@ -28,13 +46,4 @@
 
 .tarefa-feita strong {
     text-decoration: line-through;
-}
-
-/* Botão verde de "Feita" */
-.btn-concluir {
-    background-color: var(--verde);
-}
-
-.btn-concluir:hover {
-    background-color: #15602f;
 }
